@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+
+printf("Body Mass Index (BMI) Calculation Programme\n");
+
+// Identify variables
+float weight, height, obesityClassification;
+
+// Take weight input (as kilogram) from the user and printout 
+printf("Your weight is (kg): ");
+scanf("%f", &weight);
+
+// Take height input (as meter) from the user and printout
+printf("Your height is (m): ");
+scanf("%f", &height);
+
+// Calculate Body Mass Index (BMI) and printout
+double BMI = ((weight) / (height * height));
+printf("Your BMI: %.2f\n", BMI);
+
+// Find the obesity classsification and print the result
+if (BMI >=45){
+    printf("Obesity classification: Fat - Obese III\n");
+}else if (BMI < 45 && BMI >= 35){
+    printf("Obesity classification: Fat - Obese II\n");
+}else if (BMI < 35 && BMI >= 30){
+    printf("Obesity classification: Fat - Obese I\n");
+}else if (BMI < 30 && BMI >=25){
+    printf("Obesity classification: Slightly Fat\n");
+}else if(BMI < 25 && BMI >=20){
+    printf("Obesity classification: Normal\n");
+}else{
+    printf("Obesity classification: Slim\n");
+}
+return 0;
+}
